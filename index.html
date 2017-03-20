@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosperoware</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css" />
+</head>
+
+<body>
+    <main class="ui container">
+
+        <h1>Take Plaintiff's Deposition</h1>
+
+        <hr>
+
+        <section>
+            <button class="ui button">Start</button>
+            <button class="ui button">Delete</button>
+            <button class="ui button">New Time Entry</button>
+            <button class="ui button">Add Checklist Item</button>
+            <button class="ui button">Delete Checklist Item</button>
+            <button class="ui button">Configure Time</button>
+        </section>
+
+        <hr>
+
+        <section class="ui form">
+            <h2>Matter XYZ (29292-200)> L300 Discovery</h2>
+            <div class="inline fields">
+                <label class="field">
+                    <span>Template</span>
+                    <input type="radio" name="type">
+                </label>
+                <label class="field">
+                    <span>Ad-hoc</span>
+                    <input type="radio" name="type">
+                </label>
+            </div>
+            <div class="inline fields">
+                <div class="field">
+                    <label>Template</label>
+                    <select>
+                        <option value="1">Answer to Discovery Motion</option>
+                        <option value="2">Other</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Scale</label>
+                    <select>
+                        <option value="1">Medium</option>
+                        <option value="2">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="inline fields">
+                <div class="field">
+                    <label>Subject</label>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="inline fields">
+                <div class="field">
+                    <label>External Participants</label>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="inline fields">
+                <div class="field">
+                    <label>Task Code</label>
+                    <select>
+                        <option value="1">L330 Depositions</option>
+                        <option value="2"></option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Assigned</label>
+                    <select>
+                        <option value="1">Someone</option>
+                        <option value="2">Someone else</option>
+                    </select>
+                </div>
+            </div>
+            <div class="inline fields">
+                <div class="field">
+                    <label>Estimated Start Date</label>
+                    <div class="ui action input">
+                        <input type="text">
+                        <button class="ui icon button"><i class="calendar icon"></i></button>
+                    </div>
+                </div>
+                <div class="field">
+                    <label># Days to Complete</label>
+                    <input type="text">
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="critical-date-section" class="ui form">
+            <h2>Critical Date</h2>
+            <div class="inline fields">
+                <label class="field">
+                    <span>Critical</span>
+                    <input type="radio" name="date-type">
+                </label>
+                <label class="field">
+                    <span>Non-Critical</span>
+                    <input type="radio" name="date-type">
+                </label>
+            </div>
+            <div class="inline fields">
+                <div class="field">
+                    <label>Critical Date Type</label>
+                    <select>
+                        <option value="1">Deadline</option>
+                        <option value="2">Event</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Subject</label>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="inline fields">
+                <div class="field">
+                    <label>Deadline</label>
+                    <div class="ui action input">
+                        <input type="text">
+                        <button class="ui icon button"><i class="calendar icon"></i></button>
+                    </div>
+                    <input type="text">
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="checklist-section">
+            <h2>Tasks/Checklist</h2>
+            <div class="ui equal width stackable grid">
+                <div id="completion-bar" class="column">
+                    <label>% Complete</label>
+                    <div class="ui gray progress">
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <div id="total-hours" class="column">
+                    <div>Hours</div>
+                    <div>2.2/10 hrs</div>
+                </div>
+                <div id="total-amount" class="column">
+                    <div>Amount</div>
+                    <div>$800.00</div>
+                </div>
+            </div>
+
+            <div id="checklist-grid-container">
+                <div class="buttons">
+                    <button class="ui icon button"><i class="up arrow icon"></i></button>
+                    <button class="ui icon button"><i class="down arrow icon"></i></button>
+                    <button class="ui button">Mark Complete</button>
+                    <button class="ui icon button"><i class="horizontally flipped repeat icon"></i></button>
+                </div>
+
+                <table class="ui striped celled definition table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Class Person</th>
+                            <th>Budget (hrs)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Schedule Deposition</td>
+                            <td>Paralegal</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Pull Documents</td>
+                            <td>Jr. Associate</td>
+                            <td>10</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="documents-section">
+            <h2>Documents</h2>
+            <div></div>
+            <div id="documents-grid-container">
+                <div class="buttons">
+                    <button class="ui button">Download</button>
+                </div>
+                <table class="ui striped celled definition table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Edited By</th>
+                            <th>Last Edit</th>
+                            <th>Author</th>
+                            <th>Create</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Document 1</td>
+                            <td>Joseph Smith</td>
+                            <td>23-Oct-16</td>
+                            <td>Joseph Smith</td>
+                            <td>1-Oct-16 <i class="write link icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                    </tfoot>
+                </table>
+                <div class="buttons">
+                    <button class="ui button">Upload</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
